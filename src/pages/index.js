@@ -64,7 +64,7 @@ export default function Home() {
         // Fetch recent URLs immediately after shortening
         fetchRecentUrls();
       } else {
-        console.error('Error shortening URL:', response.status, response.statusText);
+        console.error('Error shortening URLs:', response.status, response.statusText);
       }
     } catch (error) {
       console.error('An unexpected error occurred during fetch:', error);
