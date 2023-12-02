@@ -95,7 +95,11 @@ export default function Home() {
           className={styles.inputStyle}
           placeholder="Enter your URL"
         />
-        <button onClick={debouncedHandleShorten} className={styles.buttonStyle}>
+        <button
+        onClick={debouncedHandleShorten}
+        className={styles.buttonStyle}
+        disabled={!originalUrl.trim()} // Disable button if originalUrl is empty or contains only whitespace
+      >
           Shorten URL
         </button>
       </div>
